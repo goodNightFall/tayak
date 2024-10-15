@@ -182,7 +182,6 @@ export class Calculator implements ICalculator {
         let depth: number = 0
         let index: number = 0
 
-        // Проходимся по выражению, чтобы найти разделяющую точку с запятой ';'
         for (let i = 0; i < expression.length; i++) {
             if (expression[i] === "(") depth++
             else if (expression[i] === ")") depth--
@@ -192,7 +191,6 @@ export class Calculator implements ICalculator {
             }
         }
 
-        // Возвращаем левый и правый операнды
         return [expression.slice(0, index), expression.slice(index + 1)]
     }
 
