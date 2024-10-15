@@ -3,7 +3,6 @@ import {
     OperatorsPriority,
     LEFT_BRACKET,
     RIGHT_BRACKET,
-    SPACE,
     MathFunctions,
 } from "./constants"
 import { Stack } from "./stack"
