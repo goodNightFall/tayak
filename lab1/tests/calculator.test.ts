@@ -1,4 +1,4 @@
-import { Calculator } from "../src/calculator" // Замени путь на правильный, если он отличается
+import { Calculator } from "../src/calculator"
 
 describe("Calculator edge case tests", () => {
     const calculator = new Calculator()
