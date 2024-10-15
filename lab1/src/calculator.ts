@@ -210,7 +210,7 @@ export class Calculator implements ICalculator {
             ) {
                 if (!stack.length()) startIndex = i
                 stack.push(mathFunction)
-                i += 3
+                i += mathFunction.length
                 continue
             }
 
