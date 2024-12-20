@@ -7,7 +7,8 @@ export const validGlobalNumberReg = /-?(?:[1-9]\d*|0)(?:,\d+)?/g
 export const invalidGlobalNumberReg =
     /-?(?:[1-9]\d*|0),[^0-9]|-?(?:[1-9]\d*|0)(?:,[0-9]+){2,}|-?(?:[1-9]\d*|0),$/
 
-export const invalidCommaReg =
-    /.*[+\-*/)()]+,|,[+\-*/)()]+.*|^[+\-*/]*,|,[+\-*/]*$/g
+export const invalidCommaReg = /.*[+\-*/(]+,|,[+\-*/)()]+.*/g
+
+export const minusReg = /--/g
 
 export const spacesReg = /\s+/g

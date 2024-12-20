@@ -11,10 +11,29 @@ import {
     validGlobalNumberReg,
     invalidGlobalNumberReg,
     invalidCommaReg,
+    minusReg,
 } from "./regex"
 
-export const prepareString = (string: string) =>
-    string.replace(spacesReg, "").replace(/\./g, ",")
+export const prepareString = (string: string) => {
+    let prePrepredString = string
+        .replace(/\+,/g, "+0,")
+        .replace(/\+\./g, "+0,")
+        .replace(/\-,/g, "-0,")
+        .replace(/\-\./g, "-0,")
+        .replace(/\*,/g, "*0,")
+        .replace(/\*\./g, "*0,")
+        .replace(/\/,/g, "/0,")
+        .replace(/\/\./g, "/0,")
+        .replace(/\(\,/g, "(0,")
+        .replace(/\(\./g, "(0,")
+        .replace(spacesReg, "")
+        .replace(/\./g, ",")
+
+    if (prePrepredString[0] === ",") {
+        prePrepredString = "0" + prePrepredString
+    }
+    return prePrepredString
+}
 
 export const getDisallowedSymbols = (string: string) =>
     string.match(disallowedSymbolsReg) ?? []
@@ -61,6 +80,8 @@ export const validateExpression = (expression: string) => {
         isStringHasInvalidCommas(expression)
     )
         throw new Error("Expression has invalid numbers")
+
+    if (expression.match(minusReg)) throw new Error("Invalid syntax")
 }
 
 export const parseExpression = (expression: string) => {

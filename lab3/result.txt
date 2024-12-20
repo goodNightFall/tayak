@@ -1,0 +1,26 @@
+Входной алфавит:
+P = { mT, !T, /P/, C-C, a, b, c, 0, >, CS, f }
+
+Алфавит магазинных символов:
+Z = { E, T, P, R, C, S, mT, !T, /P/, C-C, a, b, c, 0, >, CS, f , h0}
+
+Список команд:
+f(s0, lambda, E) = {(s0, Tm); (s0, T!); (s0, T)}
+f(s0, lambda, T) = {(s0, /P/)}
+f(s0, lambda, P) = {(s0, R); (s0, S)}
+f(s0, lambda, R) = {(s0, C-C)}
+f(s0, lambda, C) = {(s0, a); (s0, b); (s0, c); (s0, 0); (s0, >)}
+f(s0, lambda, S) = {(s0, C); (s0, SC); (s0, f)}
+f(s0, mT, mT) = {(s0, lambda)}
+f(s0, !T, !T) = {(s0, lambda)}
+f(s0, /P/, /P/) = {(s0, lambda)}
+f(s0, C-C, C-C) = {(s0, lambda)}
+f(s0, a, a) = {(s0, lambda)}
+f(s0, b, b) = {(s0, lambda)}
+f(s0, c, c) = {(s0, lambda)}
+f(s0, 0, 0) = {(s0, lambda)}
+f(s0, >, >) = {(s0, lambda)}
+f(s0, CS, CS) = {(s0, lambda)}
+f(s0, f, f) = {(s0, lambda)}
+f(s0, lambda, h0) = {(s0, lambda)}
+Введите строку: 
