@@ -1,0 +1,18 @@
+<block rows="2" columns="2">
+    <row valign="top" halign="left" textcolor="15" bgcolor="0" height="1">
+        <column valign="center" halign="center" textcolor="14" bgcolor="1" width="40">
+            Hello, World!
+        </column>
+        <column valign="center" halign="right" textcolor="15" bgcolor="4" width="40">
+            Welcome to eMark.
+        </column>
+    </row>
+    <row valign="bottom" halign="left" textcolor="13" bgcolor="2" height="1">
+        <column valign="top" halign="left" textcolor="12" bgcolor="3" width="40">
+            Footer Left
+        </column>
+        <column valign="top" halign="right" textcolor="11" bgcolor="5" width="40">
+            Footer Right
+        </column>
+    </row>
+</block>
