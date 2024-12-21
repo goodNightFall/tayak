@@ -1,16 +1,26 @@
 --- Formatted Document ---
-
-[Block: {"rows":"2","columns":"2"}]
-
-[Row: {"valign":"top","halign":"left","textcolor":"15","bgcolor":"0","height":"1"}]
-
-[Column: {"valign":"center","halign":"center","textcolor":"14","bgcolor":"1","width":"40"}]
-
-[Column: {"valign":"center","halign":"right","textcolor":"15","bgcolor":"4","width":"40"}]
-
-[Row: {"valign":"bottom","halign":"left","textcolor":"13","bgcolor":"2","height":"1"}]
-
-[Column: {"valign":"top","halign":"left","textcolor":"12","bgcolor":"3","width":"40"}]
-
-[Column: {"valign":"top","halign":"right","textcolor":"11","bgcolor":"5","width":"40"}]
+                                                                                
+[48;5;1m[38;5;14m             Hello, W[48;5;4m[38;5;15m                     
+[48;5;3m[38;5;12mFooter Left          [48;5;5m[38;5;11m                     
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
 --- End of Document ---
