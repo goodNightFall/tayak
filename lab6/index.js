@@ -7,26 +7,22 @@ async function main() {
     output: process.stdout,
   });
 
-  rl.question("Введите путь к файлу с документом eMark: ", (filePath) => {
-    if (fs.existsSync(filePath)) {
-      const document = fs.readFileSync(filePath, "utf-8");
-      try {
-        const processor = new EMarkProcessor();
-        processor.processDocument(document);
-      } catch (error) {
-        console.error(`Ошибка: ${error.message}`);
-      }
-    } else {
-      console.error("Файл не найден.");
+  if (fs.existsSync("index.emark")) {
+    const document = fs.readFileSync("index.emark", "utf-8");
+    try {
+      const processor = new EMarkProcessor();
+      processor.processDocument(document);
+    } catch (error) {
+      console.error(`Ошибка: ${error.message}`);
     }
-    rl.close();
-  });
+  } 
+  rl.close();
 }
 
 class EMarkProcessor {
   constructor() {
     this.tagRegex = /<(?<tag>\w+)(?<attributes>[^>]*)>(?<content>.*?)<\/\k<tag>>/gs;
-    this.consoleWidth = 80; // Ширина консоли
+    this.consoleWidth = 100; 
   }
 
   processDocument(document) {
@@ -63,7 +59,7 @@ class EMarkProcessor {
     this.parseTag(content, "row");
   }
 
-  processRow(attributes, content) {
+  processRow(_attributes, content) {
     const matches = [...content.matchAll(this.tagRegex)];
 
     for (const match of matches) {
@@ -76,7 +72,7 @@ class EMarkProcessor {
       }
     }
 
-    console.log(); // Переход на следующую строку
+    console.log(); 
   }
 
   renderColumn(attributes, content) {
@@ -102,7 +98,7 @@ class EMarkProcessor {
       case "right":
         return content.padStart(width);
       default:
-        return content.padEnd(width); // По умолчанию выравнивание по левому краю
+        return content.padEnd(width); 
     }
   }
 
